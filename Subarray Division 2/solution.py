@@ -18,32 +18,9 @@ import sys
 
 def birthday(s, d, m):
     # Write your code here
-    to_return=0
-    lenS=len(s)
-    tracker=[]
-    for i1 in range(0,m):
-        tracker.append(i1)
-
-    while tracker[m-1]!=lenS:
-        temp_value=0
-        for index in tracker:
-            temp_value+=s[index]
-        if temp_value==d:
-            to_return+=1
-        
-        tracker[0]+=1
-
-        i=0
-        while i<len(tracker)-1:
-            if tracker[i]+1>lenS:
-                tracker[i]=0
-                tracker[i+1]+=1
-            i+=1
-
-    return to_return
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     n = int(input().strip())
 
@@ -57,8 +34,8 @@ if __name__ == '__main__':
 
     result = birthday(s, d, m)
 
-    #print(result)
+    print(result)
 
-    fptr.write(str(result) + '\n')
+    #fptr.write(str(result) + '\n')
 
-    fptr.close()
+    #fptr.close()
